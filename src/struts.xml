@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+    <package name="myaction" namespace="/" extends="struts-default">
+        <action name="loginAction" class="cn.takia.action.loginAction">
+            <result name="success">/page/home.jsp</result>
+            <result name="error">/page/error.jsp</result>
+        </action>
+        <!--配置检查用户的ajax-->
+        <action name="checkUser" class="cn.takia.action.CheckUserAction" method="write">
+        </action>
+        <!--配置发送手机号的ajax-->
+        <action name="sendCode" class="cn.takia.action.sendCodeAction" method="write">
+
+        </action>
+        <!--配置注册账号的ajax-->
+        <action name="addUser" class="cn.takia.action.addUserAction" method="write">
+
+        </action>
+        <!--配置展示列表的action-->
+        <action name="listAction" class="cn.takia.action.ListAction" method="write">
+
+        </action>
+        <!--配置添加顾客action的ajax-->
+        <action name="addClient" class="cn.takia.action.addClientAction" method="write">
+
+        </action>
+        <!--配置删除顾客action的ajax-->
+        <action name="deleteClient" class="cn.takia.action.deleteClientAction" method="write">
+
+        </action>
+    </package>
+</struts>
